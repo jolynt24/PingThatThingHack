@@ -33,6 +33,11 @@ function PersonalDashboard() {
     setCompletedModules([...completedModules, id]);
   };
 
+  const handleShare = (product) => {
+    // Add your share logic here
+    console.log('Sharing product:', product.name);
+  };
+
   return (
     <div className="personal-dashboard">
       <h2>Travel & Savings Products</h2>
@@ -59,6 +64,13 @@ function PersonalDashboard() {
               </button>
               <button 
                 className="action-btn"
+                onClick={() => handleShare(product)}
+                title="Share"
+              >
+                <FaShare />
+              </button>
+              <button 
+                className="action-btn"
                 title="Not Interested"
               >
                 <FaSadTear />
@@ -68,12 +80,6 @@ function PersonalDashboard() {
             <div className={`learning-badge ${completedModules.includes(product.id) ? 'completed' : 'incomplete'}`}>
               <FaTrophy />
               <span>{product.learningBadge}</span>
-            </div>
-
-            <div className="share-overlay">
-              <button className="share-btn">
-                <FaShare /> Share This Product
-              </button>
             </div>
           </div>
         ))}
