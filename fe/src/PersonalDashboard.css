@@ -40,14 +40,15 @@
   display: flex;
   gap: 10px;
   margin-top: 15px;
+  justify-content: center;
 }
 
 .action-btn {
   background: none;
   border: 1px solid #ddd;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,9 +58,10 @@
 }
 
 .action-btn:hover {
-  background: #f8f9fa;
-  color: green;
-  border-color: green;
+  background: #f0f0f0;
+  color: #007bff;
+  border-color: #007bff;
+  transform: scale(1.1);
 }
 
 .learning-badge {
@@ -87,41 +89,4 @@
   color: #ffd700;
 }
 
-.share-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
-
-.product-box:hover .share-overlay {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.share-btn {
-  background: green;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 25px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: bold;
-  transition: transform 0.2s;
-}
-
-.share-btn:hover {
-  transform: scale(1.05);
-  background: lightgreen;
-}
+/* Remove the .share-overlay styles as they're no longer needed */
