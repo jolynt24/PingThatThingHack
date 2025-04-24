@@ -1,18 +1,18 @@
 body {
   font-family: Arial, sans-serif;
-  font-size: 40px;
+  font-size: 16px; /* Reset from 40px to standard size */
   margin: 0;
   padding: 0;
-  background-color: grey;
+  background-color: white;
   color: #333;
 }
 
 .dashboard-header {
   text-align: center;
-  padding: 80px;
+  padding: 40px; /* Reduced from 80px */
   background-color: green;
   color: white;
-  border: #000 solid 5px;
+  border: #000 solid 2px; /* Reduced from 5px */
 }
 
 .dashboard-container {
@@ -34,9 +34,9 @@ body {
   background-color: green;
   color: white;
   border: none;
-  padding: 20px 40px;
-  font-size: 18px;
-  border-radius: 8px;
+  padding: 10px 20px; /* Reduced from 20px 40px */
+  font-size: 16px; /* Reduced from 18px */
+  border-radius: 4px; /* Reduced from 8px */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -83,12 +83,12 @@ body {
 }
 
 .grid-button {
-  width: 97%; /* Slightly smaller to fit within reduced spacing */
-  height: 97%; /* Slightly smaller to fit within reduced spacing */
-  font-size: 4rem; /* Larger font size for more emphasis */
-  font-family: 'Pacifico'; /* Fun and playful font */
-  border: 3px solid #000; /* Add a black border around the buttons */
-  border-radius: 10px; /* Rounded corners */
+  width: 98%;
+  height: 98%;
+  font-size: 2rem; /* Reduced from 4rem */
+  font-family: 'Pacifico';
+  border: 2px solid #000; /* Reduced from 3px */
+  border-radius: 8px; /* Reduced from 10px */
   background-color: green;
   color: white;
   cursor: pointer;
@@ -97,5 +97,5 @@ body {
 
 .grid-button:hover {
   background-color: darkgreen;
-  transform: scale(1.01); /* Slight zoom effect on hover */
+  transform: scale(1.005); /* Reduced from 1.01 for subtler zoom */
 }
