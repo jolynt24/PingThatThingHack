@@ -1,7 +1,7 @@
 import React from 'react';
-import './Dashboard.css'; // Assuming you'll add styles here
+import './Page1.css'; // Assuming you'll add styles here
 
-function Dashboard() {
+function Page1() {
   return (
     <div>
       <header className="dashboard-header">
@@ -28,4 +28,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Page1;
