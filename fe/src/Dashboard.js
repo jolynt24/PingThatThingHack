@@ -9,6 +9,7 @@ function Dashboard() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [chatMessages, setChatMessages] = useState([]);
 
   const userProfile = {
     name: "Sarah Jones",
@@ -32,11 +33,32 @@ function Dashboard() {
     ]
   };
 
+  const getMockResponse = (userMessage) => {
+    const mockResponses = {
+      "hi": "Hi! How can I help you today?",
+      "give me info about the home ownership?": "We have the following products - Credit score, Mortgage and financial coach",
+      "give me information about credit score": "https://www.lloydsbank.com/understanding-credit/your-credit-score.html"
+    };
+    
+    return mockResponses[userMessage.toLowerCase()] || "I'm here to help! Ask me about Home Ownership or Credit Score.";
+  };
+
   const handleSendMessage = (e) => {
     e.preventDefault();
     if (message.trim()) {
-      // Add your message sending logic here
-      console.log('Sending message:', message);
+      // Add user message
+      const userMessage = {
+        text: message,
+        sender: 'user'
+      };
+      
+      // Get bot response
+      const botResponse = {
+        text: getMockResponse(message),
+        sender: 'bot'
+      };
+      
+      setChatMessages([...chatMessages, userMessage, botResponse]);
       setMessage('');
     }
   };
@@ -138,8 +160,7 @@ function Dashboard() {
         <div className="chat-dialog">
           <div className="chat-header">
             <div className="chat-user-info">
-              <h3>Sarah Jones</h3>
-              <span className="user-status">Online</span>
+              <h3>CinderBot</h3>
             </div>
             <button 
               className="close-button"
@@ -149,7 +170,11 @@ function Dashboard() {
             </button>
           </div>
           <div className="chat-content">
-            {/* Add your chat messages here */}
+            {chatMessages.map((msg, index) => (
+              <div key={index} className={`chat-message ${msg.sender}`}>
+                {msg.text}
+              </div>
+            ))}
           </div>
           <form className="chat-input-area" onSubmit={handleSendMessage}>
             <input

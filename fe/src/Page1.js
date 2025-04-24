@@ -13,7 +13,7 @@ function Page1() {
     <div>
       <header className="dashboard-header">
         <h1>Welcome to Cinder</h1>
-        <p>Click anywhere to get started</p>
+        <p className='subtitle'>Click anywhere to get started</p>
       </header>
       <div className="dashboard-grid">
         <div className="grid-item">
