@@ -12,6 +12,7 @@ body {
   padding: 80px;
   background-color: green;
   color: white;
+  border: #000 solid 5px;
 }
 
 .dashboard-container {
@@ -86,7 +87,7 @@ body {
   height: 97%; /* Slightly smaller to fit within reduced spacing */
   font-size: 4rem; /* Larger font size for more emphasis */
   font-family: 'Pacifico'; /* Fun and playful font */
-  border: 3px solid #fff; /* Add a white border around the buttons */
+  border: 3px solid #000; /* Add a black border around the buttons */
   border-radius: 10px; /* Rounded corners */
   background-color: green;
   color: white;
