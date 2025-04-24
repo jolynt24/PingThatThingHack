@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Page1 from './Page1';
+import Dashboard from './Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/chat" element={<Page1 />} />
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
