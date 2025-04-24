@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import logo from './lbg-logo.jpeg';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 function App() {
-  
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    // In a real application, you would authenticate the user here
+    navigate('/chat');
+  };
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={handleLogin} className="login-btn">Login</button>
       </header>
     </div>
   );
