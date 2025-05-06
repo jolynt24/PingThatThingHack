@@ -133,3 +133,5 @@ hs_err_pid*
 *.crt
 # .gitignore
 azurek8s.config
+
+.github/
