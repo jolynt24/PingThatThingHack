@@ -36,8 +36,8 @@ function Dashboard() {
   const getMockResponse = (userMessage) => {
     const mockResponses = {
       "hi": "Hi! How can I help you today?",
-      "give me info about home ownership?": "We have the following products - Credit score, Mortgage and financial coach",
-      "give me info about credit score": "https://www.lloydsbank.com/understanding-credit/your-credit-score.html"
+      "Give me info about home ownership?": "We have the following products - Credit score, Mortgage and financial coach",
+      "Give me info about credit score": "Here's an article for you: https://www.lloydsbank.com/understanding-credit/your-credit-score.html"
     };
     
     return mockResponses[userMessage.toLowerCase()] || "I'm here to help! Ask me about any of the LBG products";

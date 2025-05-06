@@ -10,14 +10,14 @@ function PersonalDashboard() {
       id: 1,
       name: "Travel Fee Waiver",
       description: "No foreign transaction fees on your Platinum Card",
-      badge: "Premium",
+      badge: "Featured",
       learningBadge: "Travel Smart"
     },
     {
       id: 2,
       name: "Monthly Saver Account",
       description: "Save regularly with competitive interest rates",
-      badge: "Featured",
+      badge: "Premium",
       learningBadge: "Savings Master"
     },
     {
